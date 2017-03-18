@@ -3,7 +3,7 @@ from Parser import Parser
 from Interpolator import Interpolator
 
 class Program:
-    def __init_(self):
+    def __init__(self):
         self.transport = Transport()
         self.parser = Parser()
         self.interpolator = Interpolator()

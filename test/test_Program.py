@@ -12,6 +12,9 @@ class Test_Program(unittest.TestCase):
     def test_construct(self):
         program = Program()
         self.assertIsNotNone(program)
+        self.assertIsNotNone(program.transport)
+        self.assertIsNotNone(program.parser)
+        self.assertIsNotNone(program.interpolator)
 
     def test_run(self):
             program = Program()
