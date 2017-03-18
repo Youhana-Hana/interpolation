@@ -13,9 +13,9 @@ Expected output:
 [[1.0, 2.0, 4.0], [4.0, 5.0, 6.0]]
 
 # tests
-python ./test.py -r test
+python3 ./test.py -r test
 
 # coverage
-python ./test.py -r coverage
+python3 ./test.py -r coverage
 
 
