@@ -3,6 +3,7 @@ sys.path.append('./lib')
 import unittest
 import mock
 from Transport import Transport
+from StringIO import StringIO
 
 class TestTransport(unittest.TestCase):
     def test_construct(self):
@@ -37,5 +38,12 @@ class TestTransport(unittest.TestCase):
             actual = transport.read()
 
             self.assertEqual(expected, actual)
+
+    @mock.patch('sys.stdout', new_callable=StringIO)
+    def test_write(self, mock_stdout):
+        transport = Transport()
+        transport.write('x')
+        self.assertEqual('x\n', mock_stdout.getvalue())
+
 if __name__ == '__main__':
     unittest.main()
