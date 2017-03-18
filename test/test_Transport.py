@@ -1,8 +1,8 @@
 import sys
-sys.path.append('../lib')
+sys.path.append('./lib')
 import unittest
 import mock
-from lib import Transport
+from Transport import Transport
 
 class TestTransport(unittest.TestCase):
     def test_construct(self):
@@ -29,5 +29,13 @@ class TestTransport(unittest.TestCase):
 
             self.assertEqual(expected, actual)
 
+    def test_read_invalid_number_of_rows(self):
+        with mock.patch('__builtin__.input', side_effect = ['not valid']):
+            expected = None
+            transport = Transport()
+
+            actual = transport.read()
+
+            self.assertEqual(expected, actual)
 if __name__ == '__main__':
     unittest.main()
