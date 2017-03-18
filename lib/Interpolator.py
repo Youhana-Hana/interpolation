@@ -40,7 +40,6 @@ class Interpolator:
         return neighbours
 
     def calculate_average(self, neighbours):
-        print(neighbours)
         total = sum(neighbours);
         count = len(neighbours);
         return round(float(total) / float (count), 6)
