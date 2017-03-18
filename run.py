@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 sys.path.append('./lib')
-from Program import Program
+from lib import Program
 
 def main(argv):
     program = Program()

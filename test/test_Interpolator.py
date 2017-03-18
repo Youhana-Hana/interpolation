@@ -3,7 +3,7 @@ sys.path.append('./lib')
 import unittest
 import mock
 import math
-from Interpolator import Interpolator
+from lib import Interpolator
 
 class Test_Interpolator(unittest.TestCase):
     def test_construct(self):

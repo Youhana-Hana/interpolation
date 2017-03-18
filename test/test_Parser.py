@@ -3,7 +3,7 @@ sys.path.append('./lib')
 import unittest
 import mock
 import math
-from Parser import Parser
+from lib import Parser
 
 class Test_Parser(unittest.TestCase):
     def test_construct(self):

@@ -1,10 +1,10 @@
-from Transport import Transport
-from Parser import Parser
-from Interpolator import Interpolator
+from lib import InputTransport
+from lib import Parser
+from lib import Interpolator
 
 class Program:
     def __init__(self):
-        self.transport = Transport()
+        self.transport = InputTransport()
         self.parser = Parser()
         self.interpolator = Interpolator()
 
