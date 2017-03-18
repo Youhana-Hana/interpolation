@@ -19,7 +19,6 @@ class Test_Program(unittest.TestCase):
             program.run()
 
             self.assertTrue(filecmp.cmp(expectedFileName, outputFileName))
-
             
 if __name__ == '__main__':
     unittest.main()
