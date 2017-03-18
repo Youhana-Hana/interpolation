@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# check coverage and fails if didn't meet 100%.
+
+python ~/src/interpolation/test.py -r coverage
+
+

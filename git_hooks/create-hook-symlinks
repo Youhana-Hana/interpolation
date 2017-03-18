@@ -1,0 +1,2 @@
+#!/bin/bash
+ln -s ~/src/interpolation/git_hooks/pre-commit ../.git/hooks/pre-commit
