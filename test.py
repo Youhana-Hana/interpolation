@@ -21,7 +21,7 @@ def main(argv):
             if action == 'test':
                 subprocess.run('python -m unittest discover -v test', shell=True, check=True)
             elif action == 'coverage':
-                completedProcess = subprocess.run('python -m coverage run ./test/*.py && python -m coverage report --omit ./test/*.py --fail-under 100', shell=True)
+                completedProcess = subprocess.run('python -m coverage erase && python -m coverage run --source=lib -m unittest discover -v ./test && python -m coverage report --fail-under=100', shell=True)
                 if completedProcess.returncode != 0:
                     print ('\n OPS! Coverage not met :(\n')
                 else:
