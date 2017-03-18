@@ -2,6 +2,8 @@
 #
 # check coverage and fails if didn't meet 100%.
 
-/usr/bin/python3 ~/src/interpolation/test.py -r test
+/usr/bin/python3 ~/src/interpolation/test.py -r coverage
+
+/usr/bin/python3 ~/src/interpolation/test.py -r integration
 
 

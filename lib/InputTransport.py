@@ -13,4 +13,5 @@ class InputTransport(Transport):
             return matrix
 
     def write(self, output):
-        print(output)
+        for line in output:
+            print(','.join(str(item) for item in line))

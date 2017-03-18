@@ -42,8 +42,8 @@ class TestInputTransport(unittest.TestCase):
     @mock.patch('sys.stdout', new_callable=StringIO)
     def test_write(self, mock_stdout):
         transport = InputTransport()
-        transport.write('x')
-        self.assertEqual('x\n', mock_stdout.getvalue())
+        transport.write([[1, 2, 3]])
+        self.assertEqual('1,2,3\n', mock_stdout.getvalue())
 
 if __name__ == '__main__':
     unittest.main()
